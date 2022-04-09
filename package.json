@@ -1,0 +1,9 @@
+{
+    "name": "theme-suka-site",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "build": "gulp build"
+    },
+    "dependencies": {}
+}
