@@ -23,17 +23,17 @@ jobs:
         with:
           node-version: "10"
 
-      - name: Cache node modules
-        uses: actions/cache@v1
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+      # - name: Cache node modules
+      #   uses: actions/cache@v1
+      #   with:
+      #     path: ~/.npm
+      #     key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 
       - name: Install & Build
         run: |
           export TZ='Asia/Shanghai'
-          npm i
-          npm run build
+          # npm i
+          # npm run build
           cd check-ssl
           chmod +x checker.sh
           ./checker.sh img.seeyue.top umami.seeyue.top state.seeyue.top nav.seeyue.top jinghu-moon.top jinghumoon.top
