@@ -4,14 +4,14 @@ mkdir ./tmp/api -p
 
 for domains in $@
 do
-    ./runcheck.sh ${domains}
+  ./runcheck.sh ${domains}
 done
 
 echo '[' > ./tmp/api/ct.json
 
 for domains in $@
 do
-    cat ./tmp/${domains}.json >> ./tmp/api/ct.json
+  cat ./tmp/${domains}.json >> ./tmp/api/ct.json
 done
 
 sed -i '$d' ./tmp/api/ct.json
