@@ -12,13 +12,13 @@
 4. 新建一个GithubToken，权限至少要拥有写入Repo
 5. 登入 https://travis-ci.org 勾开此项目，添加三个变量：
 
-- GITHUB_TOKEN：你的GithubToken，**必填**
-- GITHUB_EMAIL：你的Github邮箱
-- GITHUB_USER：你的github用户名
+- GITHUB_TOKEN：你的 GithubToken，**必填**
+- GITHUB_EMAIL：你的 Github 邮箱
+- GITHUB_USER：你的 github 用户名
 
-6. Trigger这个项目
-7. 进入Github项目，勾开GithubPage服务
-8. 进入Trvis-ci，设置Cron Jobs为每日部署
+6. Trigger 这个项目
+7. 进入 Github 项目，勾开 Github Page 服务
+8. 进入 Trvis-ci，设置 Cron Jobs 为每日部署
 
 ## GithubAction
 
