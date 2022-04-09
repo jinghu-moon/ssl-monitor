@@ -6,4 +6,3 @@ node_modules
 _build
 public
 dist
-package-lock.json

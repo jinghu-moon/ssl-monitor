@@ -1,6 +1,5 @@
 let gulp = require("gulp");
 let autoprefixer = require("gulp-autoprefixer");
-let uglify = require("gulp-uglify");
 let rename = require("gulp-rename");
 let del = require("del");
 
