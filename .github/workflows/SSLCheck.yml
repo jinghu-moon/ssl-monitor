@@ -3,7 +3,7 @@ name: SSLCheck
 on:
   push:
     branches:
-      - master
+      - main
   schedule:
     # 每天12点
     - cron: "0 20 * * *"
