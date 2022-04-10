@@ -40,9 +40,9 @@ jobs:
           cd ..
           mkdir publc
           cd check-ssl
-          cp -r ./output/ct.json ../public/ct.json
+          cp -rf ./output/ct.json ../public/ct.json
           cd ..
-          cp -r ./src/index.html ./public/index.html
+          cp -rf ./src/index.html ./public/index.html
           # echo "ssl.seeyue.top" > ./public/CNAME
 # git ad && git cmm "删减文件" && git ps
       - name: Deploy
