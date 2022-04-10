@@ -2,12 +2,19 @@
 
 本项目可以生成一个**静态网页**，显示域名的 SSL 相关信息（证书的颁布时间、到期时间、剩余时间等）。
 
-本项目基于 [@ChenyFan](![img](file:///C:\Users\khi12\AppData\Roaming\Tencent\QQTempSys\[5UQ[BL(6~BS2JV6W}N6[%S.png)https://github.com/chenyfan) 的 [CheckSSL](![img](file:///C:\Users\khi12\AppData\Roaming\Tencent\QQTempSys\[5UQ[BL(6~BS2JV6W}N6[%S.png)https://github.com/chenyfan/CheckSSL) 、[ssl](![img](file:///C:\Users\khi12\AppData\Roaming\Tencent\QQTempSys\[5UQ[BL(6~BS2JV6W}N6[%S.png)https://github.com/chenyfan/ssl) 项目。原作者把生成域名 SSL 信息和生成 SSL 静态监测网站分为两个项目。我做出了一些修改，如下：
+本项目基于 [@ChenyFan](https://github.com/chenyfan) 的 [CheckSSL](https://github.com/chenyfan/CheckSSL) 、[ssl](https://github.com/chenyfan/ssl) 项目。原作者把生成域名 SSL 信息和生成 SSL 静态监测网站分为两个项目。我做出了一些修改，如下：
 
 - 合并两个仓库，删减多余的文件。
 - 可以在本地或者云端（Github Actions）生成域名 SSL 信息。
 - 修改域名信息的显示样式。
-- 网页样式优化，引用的 CSS 文件使用 staticfile 加速。
+- 网页样式优化，CSS 文件使用 staticfile 加速。
+
+**demo**
+
+- 原作者 → https://ssl.cyfan.top 
+- 我的 → https://sy-ssl.vercel.app/ 
+
+**使用过程出现问题，请提 Issues**。
 
 ## 1.2 使用
 
@@ -40,10 +47,15 @@ github 访问时好时坏，github pages 也是如此。所以你可以使用以
    npm install
    ```
 
-   
-
    运行 `start.sh`，按照界面提示操作。等待一段时间，可能等会很久，实测，6 个域名需要两分多钟。
 
-3. 脚本运行结束后。文件夹里会出现一个 `public` 文件夹。里面的文件就是一个静态 SSL 监测网站所需的文件。你可以把它放在服务器上。
+3. 脚本运行结束后。文件夹里会出现一个 `public` 文件夹。里面的文件就是一个静态 SSL 监测网站所需的文件。你可以把它放在服务器上或者别的地方。
 
-   ## 1.3 感谢
+
+## 1.3 感谢
+
+- [ChenYFan/CheckSSL: Check your site's SSL status using curl & bash (github.com)](https://github.com/chenyfan/CheckSSL) 
+- [SukkaW/CheckSSL: Check your site's SSL status using curl & bash (github.com)](https://github.com/SukkaW/CheckSSL) 
+- [ChenYFan/ssl： 🔒 无后端每日检查特定网站的SSL证书状况 (github.com)](https://github.com/chenyfan/ssl) 
+- [SukkaLab/ssl (github.com)](https://github.com/SukkaLab/ssl) 
+
