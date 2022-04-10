@@ -37,9 +37,9 @@ jobs:
           cd check-ssl
           chmod +x checker.sh
           ./checker.sh img.seeyue.top umami.seeyue.top state.seeyue.top nav.seeyue.top jinghu-moon.top jinghumoon.top
-          cp -rf ./output/ct.json ../public/ct.json
+          cp -r ./output/ct.json ../public/ct.json
           cd ..
-          cp -rf ./src/index.html ./public/index.html
+          cp -r ./src/index.html ./public/index.html
           # echo "ssl.seeyue.top" > ./public/CNAME
 
       - name: Deploy
