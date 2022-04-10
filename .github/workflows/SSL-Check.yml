@@ -32,7 +32,7 @@ jobs:
       - name: Install & Build
         run: |
           export TZ='Asia/Shanghai'
-          npm i
+          # npm i
           # npm run build
           cd check-ssl
           chmod +x checker.sh
