@@ -3,7 +3,7 @@ mkdir ./tmp -p
 # -s 参数将不输出错误和进度信息。
 # -l 参数会让 HTTP 请求跟随服务器的重定向。curl 默认不跟随重定向。
 # -v 参数输出通信的整个过程，用于调试。
-curl https://${1} -v -s -l 2> ./tmp/ca.info
+curl https://${1} -v -s -l -o /dev/null 2> ./tmp/ca.info
 
 cat ./tmp/ca.info | grep 'start date: ' > ./tmp/${1}.info
 cat ./tmp/ca.info | grep 'expire date: ' >> ./tmp/${1}.info
