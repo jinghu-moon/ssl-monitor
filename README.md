@@ -1,32 +1,49 @@
-# Check Your SSL Every Day ! 
-🔒无后端每日检查特定网站的SSL证书状况
-利用Travis-CI or GithubAction定时检测SSL状态并输出
+## 1.1 介绍
 
-# 开始
+本项目可以生成一个**静态网页**，显示域名的 SSL 相关信息（证书的颁布时间、到期时间、剩余时间等）。
 
-## Travis-CI
+本项目基于 [@ChenyFan](![img](file:///C:\Users\khi12\AppData\Roaming\Tencent\QQTempSys\[5UQ[BL(6~BS2JV6W}N6[%S.png)https://github.com/chenyfan) 的 [CheckSSL](![img](file:///C:\Users\khi12\AppData\Roaming\Tencent\QQTempSys\[5UQ[BL(6~BS2JV6W}N6[%S.png)https://github.com/chenyfan/CheckSSL) 、[ssl](![img](file:///C:\Users\khi12\AppData\Roaming\Tencent\QQTempSys\[5UQ[BL(6~BS2JV6W}N6[%S.png)https://github.com/chenyfan/ssl) 项目。原作者把生成域名 SSL 信息和生成 SSL 静态监测网站分为两个项目。我做出了一些修改，如下：
 
-1. Fork 本项目，修改 `.travis.yml` 第12行，在 `  - ./checker.sh ` 后面跟上需要检测的网址,多个网址请用空格隔开.
-2. 若需要检测页面绑定域名,则修改第14行,默认指向我的域名,请替换 `ssl.cyfan.top` 为你的域名，若不需要，则将14行删除
-3. 若第二步绑定域名，请前往NS添加CNAME。
-4. 新建一个GithubToken，权限至少要拥有写入Repo
-5. 登入 https://travis-ci.org 勾开此项目，添加三个变量：
+- 合并两个仓库，删减多余的文件。
+- 可以在本地或者云端（Github Actions）生成域名 SSL 信息。
+- 修改域名信息的显示样式。
+- 网页样式优化，引用的 CSS 文件使用 staticfile 加速。
 
-- GITHUB_TOKEN：你的 GithubToken，**必填**
-- GITHUB_EMAIL：你的 Github 邮箱
-- GITHUB_USER：你的 github 用户名
+## 1.2 使用
 
-6. Trigger 这个项目
-7. 进入 Github 项目，勾开 Github Page 服务
-8. 进入 Trvis-ci，设置 Cron Jobs 为每日部署
+本项目有两种使用方式。
 
-## GithubAction
+<font style="color:#ed1c24;font-weight:bolder;">注意</font>：输入的域名必须是可以访问且能显示内容的。否则，读取的信息会出现错误。
 
-1.Fork此项目，修改`/.github/workflows/SSLCheck.yml`，第36行改成自己的域名，多个域名以空格分开
+### 1.2.1 github pages
 
-2.添加变量`TOKEN`为GithubToken
+1. settings → Developer Settings → Personal access tokens，生成 tokens。权限勾选 repo、workflow、user。
+2. Fork 本项目，进入项目的 Settings → Secrets → Actions，点击 New repository secret。NAME 是 `TOKEN`，Value 是上面生成的 tokens。
+3. 进入 .github/workflows，打开 SSL-Check.yml。第 39 行，替换为自己的监测域名。多个域名用空格隔开。第 43 行，修改为自己的域名。
+4. 保存，Github Actions 开始运行。开启github pages，访问你的 SSL 监测网站。
 
-3.保存，该项目会在UTC每天早上5点更新SSL信息
+你还可以部署在 Vercel 上。注意要在 Settings → Git，把分支改成 gh-pages，才可以正常访问。
 
-## Demo：https://ssl.cyfan.top
-## 原作者项目：[SukkaLab/ssl](https://github.com/SukkaLab/ssl)
+github 访问时好时坏，github pages 也是如此。所以你可以使用以下方式，部署在服务器上（如果有的话）
+
+### 1.2.2 其他托管方式
+
+1. 克隆项目项目到本地或者下载压缩包。
+
+   ``` bash
+   git clone https://github.com/jinghu-moon/ssl-monitor
+   ```
+
+2. 进入项目，
+
+   ```bash
+   npm instal
+   ```
+
+   
+
+   运行 `start.sh`，按照界面提示操作。等待一段时间，可能等会很久，实测，6 个域名需要两分多钟。
+
+3. 脚本运行结束后。文件夹里会出现一个 `public` 文件夹。里面的文件就是一个静态 SSL 监测网站所需的文件。你可以把它放在服务器上。
+
+   ## 1.3 感谢
