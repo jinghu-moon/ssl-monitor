@@ -39,7 +39,7 @@ rm -f ./tmp/${1}.info
 
 DATE_Previous="$(echo $(date '+%Y-%m-%d %H:%M:%S'))"
 DATE_current="$(echo $(date '+%Y %m %d %H:%M:%S'))"
-nowstamp="$(date -d "$DATE_Pre" +%s)"
+nowstamp="$(date -d "$DATE_Previous" +%s)"
 expirestamp="$(date -d "$expire_GMT" +%s)"
 # 剩余天数
 expireday=`expr $[expirestamp-nowstamp] / 86400`

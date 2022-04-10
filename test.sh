@@ -14,6 +14,11 @@ echo -e "\n"
 echo "2、开始访问网站，读取所需信息。需要一定时间，请耐心等待。"
 cd check-ssl
 chmod +x ./checker.sh
+DATE_Previous="$(echo $(date '+%Y-%m-%d %H:%M:%S'))"
+DATE_current="$(echo $(date '+%Y %m %d %H:%M:%S'))"
+now_time="$(date -d "$DATE_Pre" +%s)"
+end_time="$(date -d "$expire_GMT" +%s)"
+expireday=`expr $[expirestamp-nowstamp] / 86400`
 source ./checker.sh ${domains}
 # 复制 ct.json
 # mkdir -p public
