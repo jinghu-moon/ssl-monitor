@@ -40,7 +40,7 @@ github 访问时好时坏，github pages 也是如此。所以你可以使用以
    npm install
    ```
 
-   git ad && git cmm "删减文件" && git ps
+   
 
    运行 `start.sh`，按照界面提示操作。等待一段时间，可能等会很久，实测，6 个域名需要两分多钟。
 
