@@ -2,7 +2,9 @@
 
 本项目可以生成一个**静态网页**，显示域名的 SSL 相关信息（证书的颁布时间、到期时间、剩余时间等）。
 
-本项目基于 [@ChenyFan](https://github.com/chenyfan) 的 [CheckSSL](https://github.com/chenyfan/CheckSSL) 、[ssl](https://github.com/chenyfan/ssl) 项目。原作者把生成域名 SSL 信息和生成 SSL 静态监测网站分为两个项目。我做出了一些修改，如下：
+本项目基于 [@ChenyFan](https://github.com/chenyfan) 的 [CheckSSL](https://github.com/chenyfan/CheckSSL) 、[ssl](https://github.com/chenyfan/ssl) 项目。原作者把生成域名 SSL 信息和生成 SSL 静态监测网站分为两个项目。
+
+我做出了一些修改，如下：
 
 - 合并两个仓库，删减多余的文件。
 - 可以在本地或者云端（Github Actions）生成域名 SSL 信息。
