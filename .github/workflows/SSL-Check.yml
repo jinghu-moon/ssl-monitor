@@ -36,7 +36,7 @@ jobs:
           npm run build
           cd check-ssl
           chmod +x checker.sh
-          ./checker.sh draw.seeyue.top img.seeyue.top matomo.seeyue.top nav.seeyue.top pan.seeyue.top pic.seeyue.top state.seeyue.top uptime.seeyue.top ward.seeyue.top
+          ./checker.sh draw.seeyue.top img.seeyue.top matomo.seeyue.top nav.seeyue.top pan.seeyue.top pic.seeyue.top state.seeyue.top uptime.seeyue.top umami.seeyue.top ward.seeyue.top
           cp -rf ./output/ct.json ../public/ct.json
           cd ..
           cp -rf ./src/index.html ./public/index.html
