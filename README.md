@@ -26,7 +26,7 @@
 
 ### 1.2.1 github pages
 
-1. settings → Developer Settings → Personal access tokens，生成 tokens。权限勾选 repo、workflow、user。
+1. Settings → Developer Settings → Personal access tokens，生成 tokens。权限勾选 repo、workflow、user。
 2. Fork 本项目，进入项目的 Settings → Secrets → Actions，点击 New repository secret。NAME 是 `TOKEN`，Value 是上面生成的 tokens。
 3. 进入 .github/workflows，打开 SSL-Check.yml。第 39 行，替换为自己的监测域名。多个域名用空格隔开。第 43 行，修改为自己的域名。
 4. 保存，Github Actions 开始运行。开启github pages，访问你的 SSL 监测网站。
