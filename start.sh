@@ -23,4 +23,4 @@ end_time="$(date +%s -d "$time2")"
 use_time=$((($end_time-$now_time)/1))
 echo -e "\n"
 echo "本次读取信息耗时 ${use_time}s。"
-# echo "ssl.seeyue.top" > ./public/CNAME
+echo "ssl.seeyue.top" > ./public/CNAME
