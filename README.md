@@ -22,18 +22,18 @@
 
 本项目有两种使用方式。
 
-**注意**：输入的域名必须是可以访问且能显示内容的。否则，读取信息会出现错误，部署网站不会显示域名的 SSL 信息。
+**注意**：输入域名必须可以访问并显示内容。否则，信息读取出错，部署的网站不会显示域名的 SSL 信息。
 
 ### 1.2.1 github pages
 
 1. Settings → Developer Settings → Personal access tokens，生成 tokens。权限勾选 repo、workflow、user。
-2. Fork 本项目，进入项目的 Settings → Secrets → Actions，点击 New repository secret。NAME 是 `TOKEN`，Value 是上面生成的 tokens。
+2. Fork 本项目，进入项目的 Settings → Secrets → Actions，点击 New repository secret。NAME 是 `TOKEN` ，Value 是上面生成的 tokens。
 3. 进入 .github/workflows，打开 SSL-Check.yml。第 39 行，替换为自己的监测域名。多个域名用空格隔开。第 43 行，修改为自己的域名。
-4. 保存，Github Actions 开始运行。开启github pages，访问你的 SSL 监测网站。
+4. 保存，Github Actions 开始运行。开启 Github Pages，访问你的 SSL 监测网站。
 
-你还可以部署在 Vercel 上。注意要在 Settings → Git，把分支改成 gh-pages，才可以正常访问。
+你还可以部署在 Vercel 上。注意要在 Settings → Git，把分支改成 gh-pages，才能部署成功。
 
-github 访问时好时坏，github pages 也是如此。所以你可以使用以下方式，部署在服务器上（如果有的话）
+Github 在国内访问时好时坏，Github Pages 也是如此。所以你可以使用以下方式，部署在服务器上（如果有的话）
 
 ### 1.2.2 其他托管方式
 
@@ -49,9 +49,9 @@ github 访问时好时坏，github pages 也是如此。所以你可以使用以
    npm install
    ```
 
-   运行 `start.sh`，按照界面提示操作。等待片刻。实测，10 个域名需要 30 秒左右。
+3. 打开 `start.sh` 脚本，最后一行改为自己的域名。运行 `start.sh` 脚本，按照界面提示操作。等待片刻。实测，10 个域名需要 20 秒左右。
 
-3. 脚本运行结束后。文件夹里会出现一个 `public` 文件夹。里面的文件就是一个静态 SSL 监测网站所需的文件。你可以把它放在服务器上或者别的地方。
+1. 脚本运行丸，文件夹里会出现一个 `public` 文件夹。里面的文件就是一个静态 SSL 监测网站所需的文件。你可以把它放在服务器上或者别的地方。
 
 
 **注意**：

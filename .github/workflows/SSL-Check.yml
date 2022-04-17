@@ -40,7 +40,7 @@ jobs:
           cp -rf ./output/ct.json ../public/ct.json
           cd ..
           cp -rf ./src/index.html ./public/index.html
-          # echo "ssl.seeyue.top" > ./public/CNAME
+          echo "ssl.seeyue.top" > ./public/CNAME
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
