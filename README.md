@@ -13,8 +13,8 @@
 
 **demo**
 
-- 原作者 → https://ssl.cyfan.top 
-- 我的 → https://sy-ssl.vercel.app/ 
+- 原作者 → https://ssl.cyfan.top/ 
+- 我的  →  https://sy-ssl.vercel.app/ 
 
 **使用过程出现问题，请提 Issues**。
 
