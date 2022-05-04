@@ -5,8 +5,8 @@ on:
     branches:
       - main
   schedule:
-    # 每天 0 点 1 分自动运行
-    - cron: "1 16 * * *"
+    # 每天 01 点 01 分自动运行
+    - cron: "1 11 * * *"
 
 jobs:
   CheckSSL:
